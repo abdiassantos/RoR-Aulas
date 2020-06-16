@@ -1,3 +1,6 @@
+<p id="notice"><%= notice %></p>
+
+<%# Corpo do meu formulário de exibição%>
 <h3>Todos os Produtos</h3>
 <table class="table table-bordered table-hover">
     <thead>
@@ -8,11 +11,15 @@
             <td>Quantidade</td>
             <td>Departamento</td>
             <td colspan="2">
+            
         </tr>
     </thead>
 
     <tbody>
         <%# todos = Produto.all %>
-        <%= render @produtos %>
+        <%= render @produtos_por_departamento %>
     </tbody>
 </table>
+
+<%= link_to 'Editar departamento', edit_departamento_path(@departamento), class:"btn btn-default" %>
+<%= link_to 'Voltar', departamentos_path, class:"btn btn-default" %>

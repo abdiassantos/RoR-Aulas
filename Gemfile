@@ -3,7 +3,9 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.7.1'
 
-#Twitter Bootstrap
+# Rails locale data I18N
+gem 'rails-i18n', '~> 6.0.0' # For 6.0.0 or higher
+# Twitter Bootstrap
 gem 'twitter-bootstrap-rails'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.2', '>= 6.0.2.2'
