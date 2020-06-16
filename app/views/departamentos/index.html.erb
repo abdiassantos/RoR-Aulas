@@ -14,9 +14,9 @@
     <% @departamentos.each do |departamento| %>
       <tr>
         <td><%= departamento.nome %></td>
-        <td><%= link_to 'Ver Produtos', departamento, class:"btn btn-default" %></td>
-        <td><%= link_to 'Editar', edit_departamento_path(departamento), class:"btn btn-default" %></td>
-        <td><%= link_to 'Deletar', departamento, method: :delete, data: { confirm: 'tem certeza que deseja deletar?' }, class:"btn btn-default" %></td>
+        <td><%= link_to ' Ver produtos', departamento, class:"btn btn-default fa fa-search" %></td>
+        <td><%= link_to ' Editar', edit_departamento_path(departamento), class:"btn btn-default fa fa-pencil" %></td>
+        <td><%= link_to ' Excluir', departamento, method: :delete, data: { confirm: 'tem certeza que deseja deletar?' }, class:"btn btn-default fa fa-trash" %></td>
       </tr>
     <% end %>
   </tbody>
