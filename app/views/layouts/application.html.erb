@@ -13,6 +13,16 @@
 
     <%= nav_bar brand: "Loja", brand_link: root_url  do %>
 
+      <p class="navbar-text navbar-right">
+      <% if user_signed_in? %>
+        Logado como: <strong><%= current_user.email %></strong>.
+        <%= link_to 'Editar perfil', edit_user_registration_path, :class => 'navbar-link' %> |
+        <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+      <% else %>
+        <%= link_to "Registrar-se", new_user_registration_path, :class => 'navbar-link'  %> |
+        <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+      <% end %>
+
       <%= menu_group do %>
         <%= menu_item  "Criar novo produto", new_produto_path %>
         <%=menu_item "Departamentos", departamentos_path %>
@@ -25,6 +35,13 @@
         </div>
       <% end %>
 
+    <% end %>
+
+    <% if notice %>
+      <p class="alert alert-success"><%= notice %></p>
+    <% end %>
+    <% if alert %>
+      <p class="alert alert-danger"><%= alert %></p>
     <% end %>
 
     <div class=container>

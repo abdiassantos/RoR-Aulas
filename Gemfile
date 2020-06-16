@@ -5,6 +5,8 @@ ruby '2.7.1'
 
 # Font Awesome
 #gem 'font-awesome-less'
+# Devise Authentication
+gem 'devise'
 # Rails locale data I18N
 gem 'rails-i18n', '~> 6.0.0' # For 6.0.0 or higher
 # Twitter Bootstrap
